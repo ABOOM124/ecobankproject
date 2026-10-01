@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#064d3f" />
+    <meta
+      name="description"
+      content="EcoBank membantu Anda mengelola sampah, menabung, dan menjaga lingkungan dengan lebih mudah."
+    />
+    <title>EcoBank — Kelola Sampah, Jaga Lingkungan</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="landing-page">
+    <header class="site-header landing-header">
+      <a class="brand" href="index.html">EcoBank<span>.</span></a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <a href="#tentang">Tentang</a>
+        <a href="#layanan">Layanan</a>
+        <a href="dashboard_bank_sampah.html">Dashboard</a>
+        <a class="nav-button" href="auth.html">Masuk</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Sampahmu punya nilai</p>
+          <h1>Kelola Sampah Lebih Mudah,<br />Bersama <span>EcoBank</span></h1>
+          <p class="hero-copy">
+            Platform pengelolaan bank sampah yang membantu masyarakat
+            menyetorkan sampah, mencatat transaksi, dan memantau saldo dengan
+            lebih praktis.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="auth.html"
+              >Mulai sekarang <span aria-hidden="true">→</span></a
+            >
+            <a class="button button-outline-light" href="#tentang"
+              >Kenali EcoBank</a
+            >
+          </div>
+        </div>
+        <a class="scroll-hint" href="#tentang"
+          >Gulir untuk menjelajah <span aria-hidden="true">↓</span></a
+        >
+      </section>
+
+      <section class="section about-section" id="tentang">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-green">Dari kebiasaan kecil</p>
+          <h2>Tentang <span>EcoBank</span></h2>
+          <p>
+            Mengubah cara kita melihat sampah: bukan akhir, melainkan awal dari
+            sesuatu yang lebih baik.
+          </p>
+        </div>
+        <div class="about-grid">
+          <article>
+            <span class="icon-bubble" aria-hidden="true">♻</span>
+            <h3>Mengelola sampah, menjaga lingkungan</h3>
+            <p>
+              Kami hadir untuk membantu proses pengelolaan bank sampah menjadi
+              lebih mudah, teratur, dan efisien. Setiap setoran tercatat, setiap
+              langkah membawa dampak.
+            </p>
+          </article>
+          <article class="mission-card">
+            <span class="icon-bubble" aria-hidden="true">🌱</span>
+            <h3>Tujuan kami</h3>
+            <p>
+              Membangun sistem pengelolaan bank sampah yang mudah digunakan,
+              terorganisir, dan transparan, serta mendorong masyarakat untuk
+              lebih peduli terhadap lingkungan.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pickup-banner" id="layanan">
+        <div class="pickup-overlay"></div>
+        <div class="pickup-content">
+          <p class="eyebrow">Praktis dari rumah</p>
+          <h2>Sampahmu, kami jemput.<br />Cuanmu, kamu dapat.</h2>
+          <p>
+            Sampah menumpuk di rumah? Kumpulkan, request penjemputan lewat
+            aplikasi, dan jadikan sampahmu lebih bernilai.
+          </p>
+          <a class="button button-primary button-small" href="transaksi.html"
+            >Lihat layanan <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </section>
+
+      <section class="section impact-section">
+        <div class="section-heading">
+          <p class="eyebrow eyebrow-green">Bersama kita bisa</p>
+          <h2>Gerakan kecil, dampak besar</h2>
+          <p>
+            Terhubung dengan komunitas dan titik bank sampah di sekitar Anda.
+          </p>
+        </div>
+        <div class="impact-grid">
+          <div class="impact-stat">
+            <strong>1.200+</strong><span>Pengguna aktif</span>
+          </div>
+          <div class="impact-stat">
+            <strong>84,6 kg</strong><span>Sampah terkumpul bulan ini</span>
+          </div>
+          <div class="impact-stat">
+            <strong>32</strong><span>Transaksi minggu ini</span>
+          </div>
+        </div>
+        <div
+          class="map-card"
+          role="img"
+          aria-label="Ilustrasi peta titik layanan bank sampah"
+        >
+          <span class="map-road road-one"></span
+          ><span class="map-road road-two"></span
+          ><span class="map-road road-three"></span>
+          <span class="map-pin pin-one">♻</span
+          ><span class="map-pin pin-two">♻</span
+          ><span class="map-pin pin-three">♻</span>
+          <div class="map-label">
+            <span class="status-dot"></span> Titik layanan EcoBank terdekat
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand" href="index.html">EcoBank<span>.</span></a>
+      <p>Lebih bijak mengelola sampah, lebih baik untuk bumi.</p>
+      <a href="dashboard_bank_sampah.html"
+        >Jelajahi dashboard <span aria-hidden="true">→</span></a
+      >
+    </footer>
+    <script src="app.js?v=profile-menu-1"></script>
+  </body>
+</html>

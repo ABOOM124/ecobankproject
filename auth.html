@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e5f9eb" />
+    <meta
+      name="description"
+      content="Masuk atau daftar akun EcoBank untuk mengelola setoran sampah."
+    />
+    <title>Masuk — EcoBank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell" data-auth-shell data-mode="login">
+      <section class="auth-brand-panel" aria-label="Tentang EcoBank">
+        <a class="auth-brand-logo" href="index.html">Eco<span>Bank</span></a>
+        <div class="auth-brand-copy">
+          <h1>Sampahmu,<br />jadi lebih<br />berarti.</h1>
+          <p>
+            Kelola sampah, kumpulkan saldo, dan ikut berkontribusi dalam
+            menciptakan lingkungan yang lebih bersih.
+          </p>
+        </div>
+        <div class="auth-impact" aria-label="Dampak EcoBank">
+          <div><strong>8.5K+</strong><span>Sampah Terkumpul</span></div>
+          <div><strong>1.3K+</strong><span>Pengguna</span></div>
+          <div><strong>3.4K+</strong><span>Setoran</span></div>
+        </div>
+      </section>
+
+      <section class="auth-form-panel" aria-labelledby="auth-title">
+        <div class="auth-form-content">
+          <h2 id="auth-title" data-auth-title>Selamat Datang</h2>
+          <p class="auth-subtitle" data-auth-subtitle>
+            Masuk ke akun EcoBank kamu
+          </p>
+
+          <form class="auth-form" data-auth-form="login" autocomplete="on">
+            <label for="login-email">Email</label>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="login-password">Password</label>
+            <input
+              id="login-password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              minlength="8"
+              required
+            />
+
+            <div class="auth-options">
+              <label class="remember-option"
+                ><input type="checkbox" name="remember" />
+                <span>Ingat saya</span></label
+              >
+              <button
+                class="auth-inline-button"
+                type="button"
+                data-forgot-password
+              >
+                Lupa Password?
+              </button>
+            </div>
+            <button class="auth-submit" type="submit">Masuk ke EcoBank</button>
+          </form>
+
+          <form
+            class="auth-form register-form"
+            data-auth-form="register"
+            autocomplete="on"
+            hidden
+          >
+            <label for="register-name">Nama lengkap</label>
+            <input
+              id="register-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              maxlength="100"
+              required
+            />
+
+            <label for="register-email">Email</label>
+            <input
+              id="register-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+            <label for="register-phone">Nomor telepon</label>
+            <input
+              id="register-phone"
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              autocomplete="tel"
+              minlength="8"
+              maxlength="20"
+              pattern="[0-9+() -]{8,20}"
+              required
+            />
+
+            <label for="register-district">Kecamatan</label>
+            <select
+              id="register-district"
+              name="district"
+              autocomplete="address-level2"
+              required
+            >
+              <option value="" selected disabled>Pilih kecamatan</option>
+              <option value="Batam Kota">Batam Kota</option>
+              <option value="Batu Aji">Batu Aji</option>
+              <option value="Batu Ampar">Batu Ampar</option>
+              <option value="Belakang Padang">Belakang Padang</option>
+              <option value="Bengkong">Bengkong</option>
+              <option value="Bulang">Bulang</option>
+              <option value="Galang">Galang</option>
+              <option value="Lubuk Baja">Lubuk Baja</option>
+              <option value="Nongsa">Nongsa</option>
+              <option value="Sagulung">Sagulung</option>
+              <option value="Sei Beduk">Sei Beduk</option>
+              <option value="Sekupang">Sekupang</option>
+            </select>
+
+            <label for="register-password">Password</label>
+            <input
+              id="register-password"
+              name="password"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              maxlength="72"
+              required
+            />
+
+            <label for="register-confirm-password">Konfirmasi password</label>
+            <input
+              id="register-confirm-password"
+              name="confirmPassword"
+              type="password"
+              autocomplete="new-password"
+              minlength="8"
+              maxlength="72"
+              required
+            />
+
+            <button class="auth-submit" type="submit">Daftar ke EcoBank</button>
+          </form>
+
+          <p
+            class="auth-feedback"
+            data-auth-feedback
+            role="status"
+            aria-live="polite"
+          ></p>
+          <div class="auth-divider"><span>atau</span></div>
+          <p class="auth-switch-copy" data-auth-switch-copy>
+            Belum punya akun?
+            <button
+              class="auth-inline-button"
+              type="button"
+              data-auth-switch="register"
+            >
+              Daftar sekarang
+            </button>
+          </p>
+          <p class="auth-back"><a href="index.html">← Kembali ke beranda</a></p>
+        </div>
+      </section>
+    </main>
+    <script src="auth.js"></script>
+  </body>
+</html>
