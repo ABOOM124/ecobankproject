@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f5f2" />
+    <meta
+      name="description"
+      content="Atur jenis sampah yang diterima dan harga tukar EcoBank."
+    />
+    <title>Layanan & Harga — EcoBank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="app-page" data-page="prices">
+    <header class="app-header">
+      <a class="brand" href="index.html">EcoBank<span>.</span></a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="app-nav" aria-label="Navigasi utama">
+        <a href="dashboard_bank_sampah.html">Beranda</a>
+        <a href="transaksi.html"
+          >Transaksi <span class="nav-count" data-pending-count>3</span></a
+        >
+        <a href="peringkat.html">Peringkat</a>
+        <a class="active" href="listing_limbah_sampah.html">Layanan</a>
+      </nav>
+      <div class="profile-control" data-profile-control>
+        <button
+          class="profile-button"
+          type="button"
+          aria-label="Buka menu profil admin"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="profile-menu"
+          data-profile-toggle
+        >
+          A
+        </button>
+        <div class="profile-dropdown" id="profile-menu" hidden>
+          <strong>Admin EcoBank</strong>
+          <a href="dashboard_bank_sampah.html">Dashboard</a>
+          <a href="transaksi.html">Transaksi</a>
+          <a href="peringkat.html">Peringkat</a>
+          <button
+            type="button"
+            data-profile-logout
+            data-logout-target="auth.html"
+          >
+            Keluar
+          </button>
+          <p data-profile-feedback role="status" hidden></p>
+        </div>
+      </div>
+    </header>
+    <main class="app-main">
+      <div class="page-intro">
+        <div>
+          <p class="eyebrow eyebrow-green">Pengaturan bank sampah</p>
+          <h1>Layanan &amp; harga</h1>
+          <p>Atur jenis sampah yang diterima dan nilai tukar per kilogram.</p>
+        </div>
+        <button class="button button-primary" type="button" data-add-waste>
+          ＋ Tambah jenis sampah
+        </button>
+      </div>
+      <section class="price-toolbar panel">
+        <div>
+          <span class="eyebrow eyebrow-green">Harga tukar sampah</span>
+          <h2>Daftar harga</h2>
+          <p>
+            Harga terakhir diperbarui <span data-price-updated>hari ini</span>
+          </p>
+        </div>
+        <label class="search-field"
+          ><span aria-hidden="true">⌕</span
+          ><input
+            type="search"
+            placeholder="Cari jenis sampah..."
+            aria-label="Cari jenis sampah"
+            data-price-search
+        /></label>
+      </section>
+      <div class="price-summary">
+        <span
+          ><i class="status-dot"></i>
+          <b data-price-count>0 jenis sampah</b> aktif</span
+        ><span>Harga berlaku per kilogram</span>
+      </div>
+      <section class="price-grid" aria-label="Jenis sampah dan harga">
+        <article class="price-category" data-category="Plastik">
+          <header>
+            <span class="category-icon">♻</span>
+            <div>
+              <h2>Plastik</h2>
+              <p>Botol dan kemasan plastik</p>
+            </div>
+            <span class="category-total">5 jenis</span>
+          </header>
+          <div class="waste-list" data-waste-list="Plastik"></div>
+        </article>
+        <article class="price-category" data-category="Kertas">
+          <header>
+            <span class="category-icon category-blue">▤</span>
+            <div>
+              <h2>Kertas</h2>
+              <p>Kertas dan produk karton</p>
+            </div>
+            <span class="category-total">5 jenis</span>
+          </header>
+          <div class="waste-list" data-waste-list="Kertas"></div>
+        </article>
+        <article class="price-category" data-category="Logam">
+          <header>
+            <span class="category-icon category-orange">⚙</span>
+            <div>
+              <h2>Logam</h2>
+              <p>Logam dan kaleng bekas</p>
+            </div>
+            <span class="category-total">4 jenis</span>
+          </header>
+          <div class="waste-list" data-waste-list="Logam"></div>
+        </article>
+        <article class="price-category" data-category="Kaca">
+          <header>
+            <span class="category-icon category-purple">◇</span>
+            <div>
+              <h2>Kaca</h2>
+              <p>Botol dan wadah kaca</p>
+            </div>
+            <span class="category-total">4 jenis</span>
+          </header>
+          <div class="waste-list" data-waste-list="Kaca"></div>
+        </article>
+      </section>
+      <p
+        class="inline-notice"
+        data-price-notice
+        role="status"
+        aria-live="polite"
+      ></p>
+    </main>
+    <dialog class="edit-dialog" data-price-dialog>
+      <form method="dialog" class="dialog-close-form">
+        <button class="dialog-close" aria-label="Tutup" value="cancel">
+          ×
+        </button>
+      </form>
+      <span class="eyebrow eyebrow-green">Pengaturan harga</span>
+      <h2 data-dialog-title>Ubah jenis sampah</h2>
+      <form data-price-form>
+        <input type="hidden" name="id" />
+        <label
+          >Jenis sampah<input
+            name="name"
+            required
+            maxlength="40"
+            placeholder="Contoh: Botol kaca"
+        /></label>
+        <label
+          >Kategori<select name="category">
+            <option>Plastik</option>
+            <option>Kertas</option>
+            <option>Logam</option>
+            <option>Kaca</option>
+          </select></label
+        >
+        <label
+          >Harga per kilogram <span class="input-prefix">Rp</span
+          ><input
+            name="price"
+            type="number"
+            min="1"
+            max="10000000"
+            step="1"
+            required
+            placeholder="Contoh: 2000"
+        /></label>
+        <p class="form-helper">
+          Masukkan angka dalam rupiah. Contoh: 2000 = Rp 2.000/kg.
+        </p>
+        <div class="dialog-actions">
+          <button
+            class="button button-secondary"
+            type="button"
+            data-dialog-cancel
+          >
+            Batal</button
+          ><button class="button button-primary" type="submit">
+            Simpan perubahan
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <footer class="app-footer">
+      <a class="brand" href="index.html">EcoBank<span>.</span></a
+      ><span>Mengubah sampah menjadi harapan.</span>
+    </footer>
+    <script src="app.js?v=profile-menu-1"></script>
+  </body>
+</html>
