@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f3f5f2" />
+    <meta
+      name="description"
+      content="Pantau saldo, harga sampah, peringkat, dan riwayat setoran EcoBank Anda."
+    />
+    <title>Beranda — EcoBank</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="app-page user-home-page">
+    <header class="app-header">
+      <a class="brand" href="beranda_user.html">EcoBank<span>.</span></a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Buka navigasi"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+      <nav class="app-nav" aria-label="Navigasi utama">
+        <a class="active" href="#beranda" aria-current="page">Beranda</a>
+        <a href="#setor">Setor Sampah</a>
+        <a href="#riwayat">Riwayat</a>
+      </nav>
+      <div class="profile-control" data-profile-control>
+        <button
+          class="profile-button user-profile"
+          type="button"
+          aria-label="Buka menu profil"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="profile-menu"
+          data-profile-toggle
+          data-user-initials
+        >
+          A
+        </button>
+        <div class="profile-dropdown" id="profile-menu" hidden>
+          <strong data-profile-name>Alza</strong>
+          <a href="beranda_user.html#beranda">Beranda</a>
+          <a href="beranda_user.html#setor">Setor sampah</a>
+          <a href="beranda_user.html#riwayat">Riwayat setoran</a>
+          <button
+            type="button"
+            data-profile-logout
+            data-logout-target="auth.html"
+          >
+            Keluar
+          </button>
+          <p data-profile-feedback role="status" hidden></p>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-main user-home-main" id="beranda">
+      <div class="user-welcome">
+        <div>
+          <p class="eyebrow eyebrow-green">Beranda</p>
+          <h1>Halo, <span data-user-name>Alza</span></h1>
+          <p>Senang melihatmu kembali. Yuk, lanjutkan kebiasaan baikmu.</p>
+        </div>
+        <span class="user-location" data-user-district
+          ><span aria-hidden="true">⌖</span> Batam Centre</span
+        >
+      </div>
+      <p class="user-status" data-user-status role="status" hidden></p>
+
+      <section class="user-cover" aria-label="Ajakan menjaga lingkungan">
+        <div class="user-cover-shade"></div>
+        <div class="user-cover-content">
+          <p class="eyebrow">Satu setoran, banyak perubahan</p>
+          <h2>Sampah hari ini,<br />masa depan lebih bersih.</h2>
+          <a class="button button-light" href="#setor">
+            Mulai dari rumah <span aria-hidden="true">→</span>
+          </a>
+        </div>
+        <span class="cover-stamp" aria-hidden="true">♻</span>
+      </section>
+
+      <section class="user-summary" id="setor" aria-label="Setoran dan saldo">
+        <article class="deposit-prompt">
+          <div class="deposit-image">
+            <img
+              src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=500&q=85"
+              alt="Sampah daur ulang yang siap disetorkan"
+              loading="lazy"
+            />
+          </div>
+          <div class="deposit-copy">
+            <p class="eyebrow eyebrow-green">Mulai langkah baikmu</p>
+            <h2>Setor sampah yuk!</h2>
+            <p>
+              Pilah sampah dari rumah. Cek harga terbaru sebelum kamu
+              menyetorkannya.
+            </p>
+            <a class="button button-primary button-small" href="#harga">
+              Lihat harga sampah <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+        <article class="balance-panel" aria-label="Saldo EcoPoint">
+          <div class="balance-heading">
+            <span>Saldo</span
+            ><span class="balance-mark" aria-hidden="true">Rp</span>
+          </div>
+          <strong>Rp 20.000</strong>
+          <p>Saldo EcoPoint yang sudah kamu kumpulkan.</p>
+          <a href="#riwayat">Lihat riwayat <span aria-hidden="true">→</span></a>
+        </article>
+      </section>
+
+      <section class="user-rankings" aria-label="Peringkat bulan ini">
+        <article class="user-podium">
+          <div class="user-section-heading">
+            <h2>Peringkat bulan ini</h2>
+            <p>Batam Centre</p>
+          </div>
+          <div
+            class="mini-podium"
+            role="img"
+            aria-label="Peringkatmu saat ini: 25"
+          >
+            <span class="podium-person person-second"><i>CK</i><b>2</b></span>
+            <span class="podium-person person-first"><i>AZ</i><b>1</b></span>
+            <span class="podium-person person-third"><i>DX</i><b>3</b></span>
+            <span class="mini-podium-base base-second"></span>
+            <span class="mini-podium-base base-first"></span>
+            <span class="mini-podium-base base-third"></span>
+          </div>
+          <a class="rank-self" href="peringkat.html">
+            <strong>Anda</strong><span>25th</span><b>7 kg</b>
+          </a>
+          <a class="mini-board-link" href="peringkat.html">
+            Lihat papan peringkat <span aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="user-leaderboard">
+          <div class="user-section-heading user-heading-row">
+            <h2>Kontributor teratas</h2>
+            <span>Berat sampah</span>
+          </div>
+          <ol>
+            <li>
+              <span>1st</span><i class="leader-avatar">AZ</i
+              ><strong>Alzaakh</strong><b>69 kg</b>
+            </li>
+            <li>
+              <span>2nd</span><i class="leader-avatar">CK</i
+              ><strong>Cukukuruk</strong><b>50 kg</b>
+            </li>
+            <li>
+              <span>3rd</span><i class="leader-avatar">DX</i
+              ><strong>Dexter</strong><b>45 kg</b>
+            </li>
+          </ol>
+        </article>
+
+        <article class="waste-leaderboard">
+          <div class="user-section-heading">
+            <h2>Jenis sampah<br />bulan ini</h2>
+            <p>Pantau jenis sampah yang paling banyak dikumpulkan.</p>
+          </div>
+          <ol>
+            <li>
+              <span>Botol Plastik</span><b>350 <small>kg</small></b>
+            </li>
+            <li>
+              <span>Kertas</span><b>150 <small>kg</small></b>
+            </li>
+            <li>
+              <span>Logam</span><b>145 <small>kg</small></b>
+            </li>
+            <li>
+              <span>Kaca</span><b>79 <small>kg</small></b>
+            </li>
+          </ol>
+          <a href="peringkat.html"
+            >Lihat semua <span aria-hidden="true">→</span></a
+          >
+        </article>
+      </section>
+
+      <section class="user-prices" id="harga" aria-labelledby="prices-title">
+        <div class="user-section-heading price-heading">
+          <div>
+            <p class="eyebrow eyebrow-green">Harga tukar sampah</p>
+            <h2 id="prices-title">Harga sampah</h2>
+            <p>Nilai tukar per kilogram, berlaku hari ini.</p>
+          </div>
+          <span class="price-updated"><i></i> Diperbarui hari ini</span>
+        </div>
+        <div class="user-price-grid">
+          <article class="user-price-category">
+            <h3><span class="price-dot plastic-dot"></span>Plastik</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama sampah</th>
+                  <th>Harga /kg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Botol plastik</td>
+                  <td>Rp 6.500</td>
+                </tr>
+                <tr>
+                  <td>Tutup botol</td>
+                  <td>Rp 7.200</td>
+                </tr>
+                <tr>
+                  <td>Gelas plastik</td>
+                  <td>Rp 4.800</td>
+                </tr>
+                <tr>
+                  <td>Plastik kemasan</td>
+                  <td>Rp 3.800</td>
+                </tr>
+                <tr>
+                  <td>Kantong plastik</td>
+                  <td>Rp 2.800</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="user-price-category">
+            <h3><span class="price-dot paper-dot"></span>Kertas</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama sampah</th>
+                  <th>Harga /kg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kardus</td>
+                  <td>Rp 3.800</td>
+                </tr>
+                <tr>
+                  <td>Kertas HVS</td>
+                  <td>Rp 3.500</td>
+                </tr>
+                <tr>
+                  <td>Koran</td>
+                  <td>Rp 2.900</td>
+                </tr>
+                <tr>
+                  <td>Majalah</td>
+                  <td>Rp 2.600</td>
+                </tr>
+                <tr>
+                  <td>Buku bekas</td>
+                  <td>Rp 3.000</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="user-price-category">
+            <h3><span class="price-dot metal-dot"></span>Logam</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama sampah</th>
+                  <th>Harga /kg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Kaleng aluminium</td>
+                  <td>Rp 8.500</td>
+                </tr>
+                <tr>
+                  <td>Besi bekas</td>
+                  <td>Rp 4.200</td>
+                </tr>
+                <tr>
+                  <td>Tembaga</td>
+                  <td>Rp 56.000</td>
+                </tr>
+                <tr>
+                  <td>Baja ringan</td>
+                  <td>Rp 3.500</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="user-price-category">
+            <h3><span class="price-dot glass-dot"></span>Kaca</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nama sampah</th>
+                  <th>Harga /kg</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Botol kaca bening</td>
+                  <td>Rp 1.800</td>
+                </tr>
+                <tr>
+                  <td>Botol kaca warna</td>
+                  <td>Rp 1.500</td>
+                </tr>
+                <tr>
+                  <td>Toples kaca</td>
+                  <td>Rp 2.000</td>
+                </tr>
+                <tr>
+                  <td>Pecahan kaca</td>
+                  <td>Rp 800</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="user-history"
+        id="riwayat"
+        aria-labelledby="history-title"
+      >
+        <div class="user-section-heading user-heading-row">
+          <div>
+            <p class="eyebrow eyebrow-green">Aktivitasmu</p>
+            <h2 id="history-title">Riwayat setoran</h2>
+          </div>
+        </div>
+        <div class="user-history-list">
+          <div class="user-history-row">
+            <span class="history-icon">♻</span
+            ><span
+              ><strong>Botol plastik</strong
+              ><small>Setoran diterima · 2,5 kg</small></span
+            ><time>Hari ini</time><b>+ Rp 16.250</b>
+          </div>
+          <div class="user-history-row">
+            <span class="history-icon history-paper">▤</span
+            ><span
+              ><strong>Kardus</strong
+              ><small>Setoran diterima · 4 kg</small></span
+            ><time>28 Sep 2026</time><b>+ Rp 15.200</b>
+          </div>
+        </div>
+      </section>
+
+      <article class="user-news">
+        <div class="news-copy">
+          <p class="eyebrow eyebrow-green">Lingkungan · Bank sampah</p>
+          <h2>Bank sampah: ubah sampah jadi manfaat untuk lingkungan</h2>
+          <p>
+            Kebiasaan memilah dari rumah bisa mengurangi sampah sekaligus
+            memberi nilai pada barang yang masih dapat didaur ulang.
+          </p>
+          <time datetime="2026-09-29">29 September 2026</time>
+          <details>
+            <summary>
+              Baca selengkapnya <span aria-hidden="true">↗</span>
+            </summary>
+            <p>
+              Mulai dari memisahkan plastik, kertas, logam, dan kaca. Pastikan
+              barang dalam keadaan bersih dan kering sebelum dibawa ke bank
+              sampah.
+            </p>
+          </details>
+        </div>
+        <img
+          src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=1000&q=85"
+          alt="Berbagai material yang siap untuk didaur ulang"
+          loading="lazy"
+        />
+      </article>
+    </main>
+
+    <footer class="app-footer">
+      <a class="brand" href="beranda_user.html">EcoBank<span>.</span></a>
+      <span>Lebih bijak mengelola sampah, lebih baik untuk bumi.</span>
+    </footer>
+    <script src="app.js?v=profile-menu-1"></script>
+    <script src="user-home.js"></script>
+  </body>
+</html>
